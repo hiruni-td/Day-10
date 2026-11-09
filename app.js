@@ -5,21 +5,33 @@ function guessNumber(){
 
     let num = Number(document.getElementById("userNumber").value);
 
-    if(count <=3 ){
+    if(count < 3 ){
 
         if(num > random){
             document.getElementById("result").innerHTML = random + 1;
 
+            console.log(random+1);
+            
+
         }else if(num < random){
             document.getElementById("result").innerHTML = random - 1;
 
+            console.log(random-1);
+            
+
         }else{
             document.getElementById("result").innerHTML = random;
+
+            console.log(random);
+            
         }
         count++;
 
     }else{
         document.getElementById("result").innerHTML = "Game Over";
+
+        console.log("Game Over");
+        
     }
     
 }
