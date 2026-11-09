@@ -17,6 +17,7 @@ function guessNumber() {
                 text: "Correct Answer",
                 icon: "success"
             });
+            document.getElementById("result").innerHTML = "Correct Number!";
             console.log("Correct Number");
 
 
@@ -24,27 +25,48 @@ function guessNumber() {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "User Number < Random Number... Try again!",
+                text: "User Number < Random Number... Try again!"
 
             });
+            document.getElementById("result").innerHTML = "Low Number!";
             console.log("User Number < Random Number");
 
         } else {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "User Number > Random Number... Try again!",
+                text: "User Number > Random Number... Try again!"
 
             });
+            document.getElementById("result").innerHTML = "High Number!";
             console.log("User Number > Random Number");
         }
         count++;
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Game Over",
+            text: "You have used all 3 attempts...!"
+
+        });
+        document.getElementById("result").innerHTML = "Game Over!";
+        console.log("Game Over");
     }
 }
-        
+
+
+
 
 
     
+
+
+
+
+
+
+
+
 
 
 
