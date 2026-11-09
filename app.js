@@ -1,37 +1,26 @@
 let random = Math.floor(Math.random()* 10 + 1);
-let count = 0;
+console.log(random);
+
+// let count = 0;
 
 function guessNumber(){
 
-    let num = Number(document.getElementById("userNumber").value);
-
-    if(count < 3 ){
-
-        if(num > random){
-            document.getElementById("result").innerHTML = random + 1;
-
-            console.log(random+1);
+    let num = (document.getElementById("userNumber").value);
+    console.log(num);
+    
+    
+        if(num == random){
+            console.log("Correct Number");
             
 
         }else if(num < random){
-            document.getElementById("result").innerHTML = random - 1;
-
-            console.log(random-1);
+            console.log("Low Number");
             
 
         }else{
-            document.getElementById("result").innerHTML = random;
-
-            console.log(random);
+            console.log("High Number");
             
         }
-        count++;
-
-    }else{
-        document.getElementById("result").innerHTML = "Game Over";
-
-        console.log("Game Over");
         
-    }
     
 }
